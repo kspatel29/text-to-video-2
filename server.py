@@ -5,9 +5,11 @@ import threading
 import time
 import json
 from flask import Flask, request, jsonify, send_file, abort
+from flask_cors import CORS
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 # Storage for tracking video generation requests
 REQUESTS_FILE = 'video_requests.json'
@@ -29,6 +31,20 @@ def save_requests(requests_data):
 # Initialize storage
 requests_storage = load_requests()
 
+# Helper function to watch and print stream output
+def stream_watcher(identifier, stream, output_list):
+    """Reads a stream line by line, prints it, and stores it."""
+    try:
+        for line_bytes in iter(stream.readline, b''):
+            line = line_bytes.decode('utf-8', errors='replace')
+            print(f"[{identifier}] {line}", end='', flush=True)
+            output_list.append(line)
+    except Exception as e:
+        print(f"Error in stream_watcher for {identifier}: {e}")
+    finally:
+        if hasattr(stream, 'close'):
+            stream.close()
+
 def generate_video(request_id, input_text):
     """
     Background function to handle video generation process
@@ -39,42 +55,75 @@ def generate_video(request_id, input_text):
         requests_data[request_id]['status'] = 'processing'
         requests_data[request_id]['start_time'] = datetime.now().isoformat()
         save_requests(requests_data)
-        
+
         # Build the command to run in the virtual environment
         cmd = f"source venv/bin/activate && python main.py '{input_text}'"
-        
+
         # Execute the command
         process = subprocess.Popen(
-            cmd, 
-            shell=True, 
+            cmd,
+            shell=True,
             executable='/bin/bash',
-            stdout=subprocess.PIPE, 
+            stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
+
+        stdout_lines = []
+        stderr_lines = []
+
+        stdout_thread = None
+        stderr_thread = None
+
+        if process.stdout:
+            stdout_thread = threading.Thread(
+                target=stream_watcher,
+                args=(f"main.py stdout - {request_id}", process.stdout, stdout_lines)
+            )
+            stdout_thread.daemon = True # Daemon threads will exit when the main program exits
+            stdout_thread.start()
+
+        if process.stderr:
+            stderr_thread = threading.Thread(
+                target=stream_watcher,
+                args=(f"main.py stderr - {request_id}", process.stderr, stderr_lines)
+            )
+            stderr_thread.daemon = True
+            stderr_thread.start()
+
+        # Wait for stream watchers to finish
+        if stdout_thread:
+            stdout_thread.join()
+        if stderr_thread:
+            stderr_thread.join()
         
-        stdout, stderr = process.communicate()
-        
+        # Wait for the process to terminate and get the return code
+        return_code = process.wait()
+
+        final_stdout = "".join(stdout_lines)
+        final_stderr = "".join(stderr_lines)
+
         # Check if process completed successfully
-        if process.returncode == 0:
+        if return_code == 0:
             # Update the request status
             requests_data = load_requests()
             requests_data[request_id]['status'] = 'completed'
             requests_data[request_id]['output_path'] = 'final_lesson.mp4'
             requests_data[request_id]['end_time'] = datetime.now().isoformat()
-            requests_data[request_id]['logs'] = stdout.decode('utf-8')
+            requests_data[request_id]['logs'] = final_stdout
             save_requests(requests_data)
         else:
             # Update with error information
-            error_output = stderr.decode('utf-8')
+            error_output = final_stderr
             requests_data = load_requests()
             requests_data[request_id]['status'] = 'failed'
             requests_data[request_id]['error'] = error_output
             requests_data[request_id]['end_time'] = datetime.now().isoformat()
-            requests_data[request_id]['logs'] = stdout.decode('utf-8')
+            requests_data[request_id]['logs'] = final_stdout # Store stdout even on failure
             save_requests(requests_data)
-            
+
     except Exception as e:
         # Handle any unexpected exceptions
+        print(f"Error in generate_video for {request_id}: {e}") # Also print server-side error
         requests_data = load_requests()
         requests_data[request_id]['status'] = 'failed'
         requests_data[request_id]['error'] = str(e)

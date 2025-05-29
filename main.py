@@ -169,11 +169,12 @@ def main():
         
         # Generate Manim code for the slide
         code_prompt = f"""
-Create **one** Manim scene class named **Slide{i}** that follows ALL of the rules
-below.  Return *only* valid Python for that class—no comments, prints, or extra
-text around it.
+Create **one** Manim scene class called **Slide{i}** and return *only* its
+Python code – no comments, no prints, no extra text.
 
-1 Imports & global config 
+────────────────────────────────────────────────────────
+1 ┃ Imports & render config  (copy EXACTLY)
+────────────────────────────────────────────────────────
 from manim import *
 from manim_voiceover import VoiceoverScene
 from manim_voiceover.services.gtts import GTTSService
@@ -182,7 +183,7 @@ config.pixel_width  = 640
 config.pixel_height = 480
 config.frame_rate   = 24
 
-# fixed colour palette – use only these names
+# fixed colour palette – use ONLY these names
 apple_color  = "#FF0000"
 stem_color   = "#8B4513"
 leaf_color   = "#00FF00"
@@ -190,34 +191,50 @@ ground_color = "#888888"
 arrow_color  = "#FFFF00"
 text_color   = "#FFFFFF"
 
-2 Class skeleton
+────────────────────────────────────────────────────────
+2 ┃ Class skeleton – *edit only inside the #### block*
+────────────────────────────────────────────────────────
 class Slide{i}(VoiceoverScene):
     def construct(self):
         self.set_speech_service(GTTSService())
 
         with self.voiceover(text=\"\"\"{slide['narration']}\"\"\") as tracker:
-            #### IMPLEMENT THE VISUAL BELOW THIS LINE ####
-            #  use only tracker.duration for timing
-            #  rate_func=linear    (all lowercase)
-            #  never call self.wait(), wait_until, remaining_duration, etc.
-            #  never call .fade_out() – use FadeOut(obj) instead
-            #  never pass mobject=… into FadeOut/FadeIn
-            #  never use MathTex / Tex.  Use Text() for any formula.
-            #  never use AnimationGroup with an empty list.
-            #  no 3-D, no tables/graphs/surfaces/plots.
+            ############################################################
+            # IMPLEMENT the visual spec below using ONLY the allowed
+            # API (see section 3).  Every self.play() must include
+            # run_time = tracker.duration * k     where 0 < k ≤ 1.
+            #
+            # {slide['visual_spec']}
+            ############################################################
 
-            {slide['visual_spec']}
-            # every self.play() must include run_time=tracker.duration
-            # or a fraction of it, e.g. run_time=tracker.duration*0.5
+────────────────────────────────────────────────────────
+3 ┃ Allowed API surface
+────────────────────────────────────────────────────────
+✓ self.play(
+      FadeIn(obj) | FadeOut(obj) | Write(obj)
+      | GrowFromCenter(obj) | Create(obj) |                  🔒
+      | Animation(Arrow)                                   🔒  # Arrow allowed
+      ,
+      run_time = tracker.duration * k,
+      rate_func = linear
+  )
 
-RULES SUMMARY
-• **NO** FRAME_WIDTH, FRAME_HEIGHT, config.*, self.camera.frame.
-  If you must span the stage: Line(LEFT*7, RIGHT*7).to_edge(DOWN, buff=0.5)
-• **NO** built-in Manim colours (BLUE, GREEN_C, …) – only the six hex vars.
-• **NO** MathTex/Tex ⇒ avoids the LaTeX tool-chain crash.
-• All fades must be FadeIn(obj) / FadeOut(obj)  (not obj.fade_out()).
-• Every AnimationGroup must contain at least ONE mobject.
-• Only keyword args that exist in Manim 0.19.
+✓ obj methods you MAY call
+  • center(), move_to(POS), to_edge(DIR, buff=0.x)
+  • next_to(TARGET, DIR, buff=0.x)
+  • shift(LEFT * n ± UP * m …)
+  • scale(f)          • set_color(hex)
+
+✗ FORBIDDEN
+  • Any NumPy math on points:  (p1 - p2), .normalize(), / np.linalg.norm  🔒
+    ↳  Instead build arrows with Arrow(start, end, …)
+  • FRAME_WIDTH, FRAME_HEIGHT, config.*, self.camera.frame
+  • built-in Manim colours (BLUE, GREEN_C, …)
+  • MathTex / Tex  → use Text() for any formula (treat it as ONE object)
+  • obj.fade_out() / obj.to_center() / add_updater()
+  • AnimationGroup / Succession / LaggedStart
+  • FadeIn/FadeOut with no object, or with keyword **mobject=**
+  • self.wait(), wait_until(), remaining_duration, get_end_animation_time()
 """
         
         code = flash(code_prompt)
@@ -281,7 +298,7 @@ RULES SUMMARY
         
         # Run ffmpeg to concatenate the videos
         ok, err = run_command([
-            "ffmpeg", "-f", "concat", "-safe", "0", 
+            "ffmpeg", "-y", "-f", "concat", "-safe", "0", 
             "-i", "list.txt", "-c", "copy", "final_lesson.mp4"
         ])
         
