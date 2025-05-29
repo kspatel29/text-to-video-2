@@ -1,0 +1,10 @@
+manim
+manim-voiceover
+google-generativeai
+python-dotenv
+gTTS
+numpy
+openai-whisper
+ffmpeg-python
+
+flask
