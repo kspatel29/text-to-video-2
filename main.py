@@ -180,7 +180,7 @@ Python code – no comments, no prints, no extra text.
 ────────────────────────────────────────────────────────
 from manim import *
 from manim_voiceover import VoiceoverScene
-from manim_voiceover.services.gtts import GTTSService
+from manim_voiceover.services.azure import AzureService
 
 config.pixel_width  = 640
 config.pixel_height = 480
@@ -199,7 +199,7 @@ text_color   = "#FFFFFF"
 ────────────────────────────────────────────────────────
 class Slide{i}(VoiceoverScene):
     def construct(self):
-        self.set_speech_service(GTTSService())
+        self.set_speech_service(AzureService(voice="en-US-DavisNeural", style="chat"))
 
         with self.voiceover(text=\"\"\"{slide['narration']}\"\"\") as tracker:
             ############################################################
