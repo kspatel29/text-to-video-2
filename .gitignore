@@ -1,61 +1,47 @@
 # Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+    __pycache__/
+    *.py[cod]
+    *$py.class
+    *.egg-info/
 
-# Virtual Environment
-venv/
-ENV/
-env/
+    # Virtual environment
+    venv/
+    .venv/
+    ENV/
+    env/
+    VENV/
+    # Add any other venv names
 
-# Environment variables
-.env
-.env.local
+    # IDE / Editor specific
+    .vscode/
+    .idea/
+    *.sublime-project
+    *.sublime-workspace
+    *.komodoproject/
+    nbproject/ # Netbeans
+    *.swp
+    *.swo
 
-# Manim media files
-media/
-final_lesson.mp4
-*.mp4
-*.png
-*.jpg
-*.jpeg
-*.gif
+    # Secrets - NEVER COMMIT THESE
+    .env*
+    *.env
+    config.py # If it contains secrets or is truly unused
 
-# Generated slides
-slide_*.py
+    # Application output / temporary files
+    media/
+    final_lesson.mp4
+    slide_*.py
+    list.txt
+    video_requests.json # Runtime state
+    *.mp4 # Other temporary videos
+    *.log # Log files
 
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-*.swo
+    # OS specific
+    .DS_Store
+    Thumbs.db
+    Desktop.ini
 
-# OS specific
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Project specific
-video_requests.json
-test_server/
+    # Manim specific temp files (if any others are common)
+    Tex/ # Manim's default Tex directory
+    text_files/ # Manim's default text_files directory
+    sound_files/ # Manim's default sound_files directory
