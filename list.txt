@@ -1,4 +1,0 @@
-file 'media/videos/slide_00/480p24/Slide0.mp4'
-file 'media/videos/slide_01/480p24/Slide1.mp4'
-file 'media/videos/slide_02/480p24/Slide2.mp4'
-file 'media/videos/slide_03/480p24/Slide3.mp4'
