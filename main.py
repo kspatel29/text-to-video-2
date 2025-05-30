@@ -15,20 +15,20 @@ import google.generativeai as genai
 # Load environment variables
 load_dotenv(".env.local")
 
-# At the top of the file, after imports
-with open("manim_context.txt") as f:
-    manim_context = f.read()
+# # At the top of the file, after imports
+# with open("manim_context.txt") as f:
+#     manim_context = f.read()
 
-with open("manim_voiceover_context.txt") as f:
-    manim_voiceover_context = f.read()
+# with open("manim_voiceover_context.txt") as f:
+#     manim_voiceover_context = f.read()
 
-complete_context = f"""
-Manim Voiceover Context:
-{manim_voiceover_context}
+# complete_context = f"""
+# Manim Voiceover Context:
+# {manim_voiceover_context}
 
-Manim Context:
-{manim_context}
-"""
+# Manim Context:
+# {manim_context}
+# """
 
 # Configure Gemini API
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
