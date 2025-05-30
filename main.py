@@ -5,6 +5,7 @@ using Gemini for storyboarding and Manim for visualization with gTTS narration.
 """
 
 import os
+import shutil
 import json
 import subprocess
 import sys
@@ -131,6 +132,8 @@ def main():
         print("Usage: python main.py 'Your text for the lesson'")
         sys.exit(1)
     
+    slide_files_to_remove = []
+
     user_text = sys.argv[1]
     print(f"Generating storyboard for: {user_text}")
     
@@ -245,9 +248,10 @@ class Slide{i}(VoiceoverScene):
         if code_match:
             code = code_match.group(1)
         
-
+        
         # Save the code to a file
         path = f"slide_{i:02}.py"
+        slide_files_to_remove.append(path)
         with open(path, "w") as f:
             f.write(code)
         
@@ -319,6 +323,31 @@ class Slide{i}(VoiceoverScene):
                 print(f"Error copying video: {err}")
     
     print("\nPipeline completed successfully!")
+
+    # Step 5: Cleanup temporary files and directories
+    print("\nCleaning up temporary files...")
+    try:
+        # Remove individual slide .py files
+        for slide_file in slide_files_to_remove:
+            if os.path.exists(slide_file):
+                os.remove(slide_file)
+                print(f"Removed {slide_file}")
+
+        # Remove list.txt
+        if os.path.exists("list.txt"):
+            os.remove("list.txt")
+            print("Removed list.txt")
+
+        # Remove the entire 'media' directory
+        if os.path.exists("media") and os.path.isdir("media"):
+            shutil.rmtree("media")
+            print("Removed directory media and all its contents")
+
+    except OSError as e:
+        print(f"Error during cleanup: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred during cleanup: {e}")
+
 
 if __name__ == "__main__":
     main()
