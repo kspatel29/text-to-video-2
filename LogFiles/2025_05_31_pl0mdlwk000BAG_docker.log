@@ -1,0 +1,367 @@
+2025-05-31T21:55:37.7789913Z Container start method called.
+2025-05-31T21:55:37.7987192Z Establishing network.
+2025-05-31T21:55:37.7991872Z Pulling image: docker.io/library/nginx:latest.
+2025-05-31T21:55:40.6274782Z Image docker.io/library/nginx:latest is pulled from registry docker.io
+2025-05-31T21:55:40.6329145Z Container is starting.
+2025-05-31T21:55:40.6331377Z Establishing user namespace if not established already.
+2025-05-31T21:55:40.6333975Z Establishing network if not established already.
+2025-05-31T21:55:40.6336566Z Mounting volumes.
+2025-05-31T21:55:40.6362078Z Nested mountpoint volatile/logs
+2025-05-31T21:55:40.6393347Z Nested mountpoint 
+2025-05-31T21:55:40.6530999Z Creating container.
+2025-05-31T21:55:40.6537733Z Creating pipes for streaming container io.
+2025-05-31T21:55:40.6552456Z Creating stdout named pipe at /podr/container/pipe/86ef739a5297_text-to-video-app/stdout_995482f83f614817b15e08731282ae54.
+2025-05-31T21:55:40.6564738Z Successfully created stdout named pipe at: /podr/container/pipe/86ef739a5297_text-to-video-app/stdout_995482f83f614817b15e08731282ae54.
+2025-05-31T21:55:40.6574419Z Opening named pipe /podr/container/pipe/86ef739a5297_text-to-video-app/stdout_995482f83f614817b15e08731282ae54 for reading in non-blocking mode.
+2025-05-31T21:55:40.6577432Z Successfully opened named pipe: /podr/container/pipe/86ef739a5297_text-to-video-app/stdout_995482f83f614817b15e08731282ae54.
+2025-05-31T21:55:40.6583850Z Successfully removed non-blocking flag from /podr/container/pipe/86ef739a5297_text-to-video-app/stdout_995482f83f614817b15e08731282ae54.
+2025-05-31T21:55:40.6586964Z Creating stderr named pipe at /podr/container/pipe/86ef739a5297_text-to-video-app/stderr_c894a0bb3f9f465d9d5055cb2699eebd.
+2025-05-31T21:55:40.6590670Z Successfully created stderr named pipe at: /podr/container/pipe/86ef739a5297_text-to-video-app/stderr_c894a0bb3f9f465d9d5055cb2699eebd.
+2025-05-31T21:55:40.6594867Z Opening named pipe /podr/container/pipe/86ef739a5297_text-to-video-app/stderr_c894a0bb3f9f465d9d5055cb2699eebd for reading in non-blocking mode.
+2025-05-31T21:55:40.6597459Z Successfully opened named pipe: /podr/container/pipe/86ef739a5297_text-to-video-app/stderr_c894a0bb3f9f465d9d5055cb2699eebd.
+2025-05-31T21:55:40.6600109Z Successfully removed non-blocking flag from /podr/container/pipe/86ef739a5297_text-to-video-app/stderr_c894a0bb3f9f465d9d5055cb2699eebd.
+2025-05-31T21:55:40.6982939Z Container image exposes ports: 80. Resolved main port to 80.
+2025-05-31T21:55:40.6987025Z Setting value of PORT variable to 80
+2025-05-31T21:55:40.6993682Z Creating container with image: docker.io/library/nginx:latest from registry: docker.io and fully qualified image name: docker.io/library/nginx:latest
+2025-05-31T21:55:41.0076881Z Starting container: 86ef739a5297_text-to-video-app.
+2025-05-31T21:55:41.0590516Z Starting watchers and probes.
+2025-05-31T21:55:41.0711336Z Starting metrics collection.
+2025-05-31T21:55:41.0737123Z Container is running.
+2025-05-31T21:55:41.1308830Z Container start method finished after 3344 ms.
+2025-05-31T21:55:42.0719169Z Site startup probe succeeded after 0.9227333 seconds.
+2025-05-31T21:55:42.1029176Z Site started.
+2025-05-31T21:56:12.4518828Z Container start method called.
+2025-05-31T21:56:12.4520328Z Establishing network.
+2025-05-31T21:56:12.4521767Z Pulling image: docker.io/library/nginx:latest.
+2025-05-31T21:56:12.6496651Z Container is starting.
+2025-05-31T21:56:12.6500449Z Establishing user namespace if not established already.
+2025-05-31T21:56:12.6501968Z Establishing network if not established already.
+2025-05-31T21:56:12.6503255Z Mounting volumes.
+2025-05-31T21:56:12.6508673Z Nested mountpoint volatile/logs
+2025-05-31T21:56:12.6527996Z Nested mountpoint 
+2025-05-31T21:56:12.6653228Z Creating container.
+2025-05-31T21:56:12.6654975Z Creating pipes for streaming container io.
+2025-05-31T21:56:12.6656793Z Creating stdout named pipe at /podr/container/pipe/e0adce143d68_text-to-video-app/stdout_68b8aabf5788445f86a292255cd0a630.
+2025-05-31T21:56:12.6659579Z Successfully created stdout named pipe at: /podr/container/pipe/e0adce143d68_text-to-video-app/stdout_68b8aabf5788445f86a292255cd0a630.
+2025-05-31T21:56:12.6662058Z Opening named pipe /podr/container/pipe/e0adce143d68_text-to-video-app/stdout_68b8aabf5788445f86a292255cd0a630 for reading in non-blocking mode.
+2025-05-31T21:56:12.6664143Z Successfully opened named pipe: /podr/container/pipe/e0adce143d68_text-to-video-app/stdout_68b8aabf5788445f86a292255cd0a630.
+2025-05-31T21:56:12.6666807Z Successfully removed non-blocking flag from /podr/container/pipe/e0adce143d68_text-to-video-app/stdout_68b8aabf5788445f86a292255cd0a630.
+2025-05-31T21:56:12.6668751Z Creating stderr named pipe at /podr/container/pipe/e0adce143d68_text-to-video-app/stderr_0093f635cb154da6af3b69598e9539d1.
+2025-05-31T21:56:12.6670996Z Successfully created stderr named pipe at: /podr/container/pipe/e0adce143d68_text-to-video-app/stderr_0093f635cb154da6af3b69598e9539d1.
+2025-05-31T21:56:12.6673616Z Opening named pipe /podr/container/pipe/e0adce143d68_text-to-video-app/stderr_0093f635cb154da6af3b69598e9539d1 for reading in non-blocking mode.
+2025-05-31T21:56:12.6675601Z Successfully opened named pipe: /podr/container/pipe/e0adce143d68_text-to-video-app/stderr_0093f635cb154da6af3b69598e9539d1.
+2025-05-31T21:56:12.6677393Z Successfully removed non-blocking flag from /podr/container/pipe/e0adce143d68_text-to-video-app/stderr_0093f635cb154da6af3b69598e9539d1.
+2025-05-31T21:56:12.6972359Z Container image exposes ports: 80. Resolved main port to 80.
+2025-05-31T21:56:12.6973806Z Setting value of PORT variable to 80
+2025-05-31T21:56:12.6975716Z Creating container with image: docker.io/library/nginx:latest from registry: docker.io and fully qualified image name: docker.io/library/nginx:latest
+2025-05-31T21:56:12.8494218Z Starting container: e0adce143d68_text-to-video-app.
+2025-05-31T21:56:12.8842298Z Starting watchers and probes.
+2025-05-31T21:56:12.8851100Z Starting metrics collection.
+2025-05-31T21:56:12.8858479Z Container is running.
+2025-05-31T21:56:12.9089161Z Container start method finished after 456 ms.
+2025-05-31T21:56:13.9319168Z Site startup probe succeeded after 1.0205655 seconds.
+2025-05-31T21:56:13.9473139Z Site started.
+2025-05-31T21:56:33.9758165Z Container is terminating. Grace period: 5 seconds.
+2025-05-31T21:56:33.9822300Z Stop and delete container. Retry count = 0
+2025-05-31T21:56:33.9830369Z Stopping container: 86ef739a5297_text-to-video-app.
+2025-05-31T21:56:35.5981779Z Deleting container: 86ef739a5297_text-to-video-app. Retry count = 0
+2025-05-31T21:56:35.6394244Z Container spec TerminationMessagePolicy  path 
+2025-05-31T21:56:35.6412837Z Container is terminated. Total time elapsed: 1664 ms.
+2025-05-31T21:56:35.6430494Z Site: text-to-video-app stopped.
+2025-05-31T22:03:57.8565877Z Container start method called.
+2025-05-31T22:03:57.8567301Z Establishing network.
+2025-05-31T22:03:57.8568702Z Pulling image: docker.io/library/nginx:latest.
+2025-05-31T22:03:58.0862479Z Container is starting.
+2025-05-31T22:03:58.0866838Z Establishing user namespace if not established already.
+2025-05-31T22:03:58.0872059Z Establishing network if not established already.
+2025-05-31T22:03:58.0875932Z Mounting volumes.
+2025-05-31T22:03:58.0880518Z Nested mountpoint volatile/logs
+2025-05-31T22:03:58.0911122Z Nested mountpoint 
+2025-05-31T22:03:58.0962060Z Creating container.
+2025-05-31T22:03:58.0963325Z Creating pipes for streaming container io.
+2025-05-31T22:03:58.0964596Z Creating stdout named pipe at /podr/container/pipe/ee08898ae1e1_text-to-video-app/stdout_445c9604f5304d8982c017267e255a93.
+2025-05-31T22:03:58.0966797Z Successfully created stdout named pipe at: /podr/container/pipe/ee08898ae1e1_text-to-video-app/stdout_445c9604f5304d8982c017267e255a93.
+2025-05-31T22:03:58.0968070Z Opening named pipe /podr/container/pipe/ee08898ae1e1_text-to-video-app/stdout_445c9604f5304d8982c017267e255a93 for reading in non-blocking mode.
+2025-05-31T22:03:58.0970534Z Successfully opened named pipe: /podr/container/pipe/ee08898ae1e1_text-to-video-app/stdout_445c9604f5304d8982c017267e255a93.
+2025-05-31T22:03:58.0971999Z Successfully removed non-blocking flag from /podr/container/pipe/ee08898ae1e1_text-to-video-app/stdout_445c9604f5304d8982c017267e255a93.
+2025-05-31T22:03:58.0973429Z Creating stderr named pipe at /podr/container/pipe/ee08898ae1e1_text-to-video-app/stderr_e5d62bb4bf4d4facb9de54b2ed6d22ab.
+2025-05-31T22:03:58.0975170Z Successfully created stderr named pipe at: /podr/container/pipe/ee08898ae1e1_text-to-video-app/stderr_e5d62bb4bf4d4facb9de54b2ed6d22ab.
+2025-05-31T22:03:58.0976496Z Opening named pipe /podr/container/pipe/ee08898ae1e1_text-to-video-app/stderr_e5d62bb4bf4d4facb9de54b2ed6d22ab for reading in non-blocking mode.
+2025-05-31T22:03:58.0977920Z Successfully opened named pipe: /podr/container/pipe/ee08898ae1e1_text-to-video-app/stderr_e5d62bb4bf4d4facb9de54b2ed6d22ab.
+2025-05-31T22:03:58.0979143Z Successfully removed non-blocking flag from /podr/container/pipe/ee08898ae1e1_text-to-video-app/stderr_e5d62bb4bf4d4facb9de54b2ed6d22ab.
+2025-05-31T22:03:58.1224415Z Container image exposes ports: 80. Resolved main port to 80.
+2025-05-31T22:03:58.1226310Z Setting value of PORT variable to 80
+2025-05-31T22:03:58.1228473Z Creating container with image: docker.io/library/nginx:latest from registry: docker.io and fully qualified image name: docker.io/library/nginx:latest
+2025-05-31T22:03:58.2196827Z Starting container: ee08898ae1e1_text-to-video-app.
+2025-05-31T22:03:58.2558501Z Starting watchers and probes.
+2025-05-31T22:03:58.2562445Z Starting metrics collection.
+2025-05-31T22:03:58.2566092Z Container is running.
+2025-05-31T22:03:58.2998265Z Container start method finished after 443 ms.
+2025-05-31T22:03:58.3197541Z Site startup probe succeeded after 0.0190529 seconds.
+2025-05-31T22:03:58.3255762Z Site started.
+2025-05-31T22:04:18.3344105Z Container is terminating. Grace period: 5 seconds.
+2025-05-31T22:04:18.3363256Z Stop and delete container. Retry count = 0
+2025-05-31T22:04:18.3368402Z Stopping container: e0adce143d68_text-to-video-app.
+2025-05-31T22:04:18.3845598Z Deleting container: e0adce143d68_text-to-video-app. Retry count = 0
+2025-05-31T22:04:18.4224684Z Container spec TerminationMessagePolicy  path 
+2025-05-31T22:04:18.4232852Z Container is terminated. Total time elapsed: 88 ms.
+2025-05-31T22:04:18.4233404Z Site: text-to-video-app stopped.
+2025-05-31T22:04:18.7868281Z Container start method called.
+2025-05-31T22:04:18.7872091Z Establishing network.
+2025-05-31T22:04:18.7875662Z Pulling image: docker.io/library/nginx:latest.
+2025-05-31T22:04:19.0317269Z Container is starting.
+2025-05-31T22:04:19.0320171Z Establishing user namespace if not established already.
+2025-05-31T22:04:19.0322964Z Establishing network if not established already.
+2025-05-31T22:04:19.0325732Z Mounting volumes.
+2025-05-31T22:04:19.0336181Z Nested mountpoint volatile/logs
+2025-05-31T22:04:19.0360146Z Nested mountpoint 
+2025-05-31T22:04:19.0452545Z Creating container.
+2025-05-31T22:04:19.0456169Z Creating pipes for streaming container io.
+2025-05-31T22:04:19.0460138Z Creating stdout named pipe at /podr/container/pipe/127c936bd7f1_text-to-video-app/stdout_3a21a7f5bbea4f75bd9023b52760dd0c.
+2025-05-31T22:04:19.0464225Z Successfully created stdout named pipe at: /podr/container/pipe/127c936bd7f1_text-to-video-app/stdout_3a21a7f5bbea4f75bd9023b52760dd0c.
+2025-05-31T22:04:19.0469884Z Opening named pipe /podr/container/pipe/127c936bd7f1_text-to-video-app/stdout_3a21a7f5bbea4f75bd9023b52760dd0c for reading in non-blocking mode.
+2025-05-31T22:04:19.0473646Z Successfully opened named pipe: /podr/container/pipe/127c936bd7f1_text-to-video-app/stdout_3a21a7f5bbea4f75bd9023b52760dd0c.
+2025-05-31T22:04:19.0477024Z Successfully removed non-blocking flag from /podr/container/pipe/127c936bd7f1_text-to-video-app/stdout_3a21a7f5bbea4f75bd9023b52760dd0c.
+2025-05-31T22:04:19.0480629Z Creating stderr named pipe at /podr/container/pipe/127c936bd7f1_text-to-video-app/stderr_a236beaaea6d4edaa7a6b6f008eb4b17.
+2025-05-31T22:04:19.0484527Z Successfully created stderr named pipe at: /podr/container/pipe/127c936bd7f1_text-to-video-app/stderr_a236beaaea6d4edaa7a6b6f008eb4b17.
+2025-05-31T22:04:19.0487974Z Opening named pipe /podr/container/pipe/127c936bd7f1_text-to-video-app/stderr_a236beaaea6d4edaa7a6b6f008eb4b17 for reading in non-blocking mode.
+2025-05-31T22:04:19.0492493Z Successfully opened named pipe: /podr/container/pipe/127c936bd7f1_text-to-video-app/stderr_a236beaaea6d4edaa7a6b6f008eb4b17.
+2025-05-31T22:04:19.0497747Z Successfully removed non-blocking flag from /podr/container/pipe/127c936bd7f1_text-to-video-app/stderr_a236beaaea6d4edaa7a6b6f008eb4b17.
+2025-05-31T22:04:19.0502778Z Creating container with image: docker.io/library/nginx:latest from registry: docker.io and fully qualified image name: docker.io/library/nginx:latest
+2025-05-31T22:04:19.1606842Z Starting container: 127c936bd7f1_text-to-video-app.
+2025-05-31T22:04:19.1829001Z Starting watchers and probes.
+2025-05-31T22:04:19.1834204Z Starting metrics collection.
+2025-05-31T22:04:19.1840653Z Container is running.
+2025-05-31T22:04:19.2133302Z Container start method finished after 426 ms.
+2025-05-31T22:04:19.3364689Z Site startup probe failed after 0.122175 seconds.
+2025-05-31T22:04:19.3491501Z Failed to start site. Revert by stopping site.
+2025-05-31T22:04:19.3508931Z Container is terminating. Grace period: 5 seconds.
+2025-05-31T22:04:19.3528047Z Stop and delete container. Retry count = 0
+2025-05-31T22:04:19.3530766Z Stopping container: 127c936bd7f1_text-to-video-app.
+2025-05-31T22:04:19.3989521Z Deleting container: 127c936bd7f1_text-to-video-app. Retry count = 0
+2025-05-31T22:04:19.4390916Z Container spec TerminationMessagePolicy  path 
+2025-05-31T22:04:19.4392655Z Container is terminated. Total time elapsed: 88 ms.
+2025-05-31T22:04:19.4394008Z Site container: text-to-video-app terminated during site startup.
+2025-05-31T22:04:19.4404124Z Site: text-to-video-app stopped.
+2025-05-31T22:04:39.5533904Z Container is terminating. Grace period: 5 seconds.
+2025-05-31T22:04:39.5568335Z Stop and delete container. Retry count = 0
+2025-05-31T22:04:39.5570916Z Stopping container: ee08898ae1e1_text-to-video-app.
+2025-05-31T22:04:39.6082380Z Deleting container: ee08898ae1e1_text-to-video-app. Retry count = 0
+2025-05-31T22:04:39.6472496Z Container spec TerminationMessagePolicy  path 
+2025-05-31T22:04:39.6476943Z Container is terminated. Total time elapsed: 93 ms.
+2025-05-31T22:04:39.6477262Z Site: text-to-video-app stopped.
+2025-05-31T22:05:03.6419037Z Container start method called.
+2025-05-31T22:05:03.6420345Z Establishing network.
+2025-05-31T22:05:03.6421553Z Pulling image: texttovideoregistry.azurecr.io/text-to-video-flask:v20250601033026.
+2025-05-31T22:05:04.2836157Z Container pull image failed with reason: ImagePullFailure. Revert by terminate.
+2025-05-31T22:05:04.2837892Z Container is terminating. Grace period: 5 seconds.
+2025-05-31T22:05:04.2839275Z Container spec TerminationMessagePolicy  path 
+2025-05-31T22:05:04.2840735Z Container is terminated. Total time elapsed: 0 ms.
+2025-05-31T22:05:04.2842055Z Site container: text-to-video-app terminated during site startup.
+2025-05-31T22:05:04.2884586Z Failed to start site. Revert by stopping site.
+2025-05-31T22:05:04.2885895Z Site: text-to-video-app stopped.
+2025-05-31T22:05:06.736Z ERROR - DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https://texttovideoregistry.azurecr.io/v2/text-to-video-flask/manifests/v20250601033026\": unauthorized: authentication required, visit https://aka.ms/acr/authorization for more information. CorrelationId: 1d354cba-eb66-496e-b7d6-c8e9be858265"}
+
+2025-05-31T22:05:06.737Z WARN  - Image pull failed. Defaulting to local copy if present.
+2025-05-31T22:05:06.738Z ERROR - Image pull failed: Verify docker image configuration and credentials (if using private repository)
+2025-05-31T22:05:06.751Z INFO  - Stopping site text-to-video-app because it failed during startup.
+2025-05-31T22:05:33.963Z ERROR - DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https://texttovideoregistry.azurecr.io/v2/text-to-video-flask/manifests/v20250601033026\": unauthorized: authentication required, visit https://aka.ms/acr/authorization for more information. CorrelationId: e090d16d-5bcd-4016-b1c7-97c345b32e90"}
+
+2025-05-31T22:05:33.964Z WARN  - Image pull failed. Defaulting to local copy if present.
+2025-05-31T22:05:33.965Z ERROR - Image pull failed: Verify docker image configuration and credentials (if using private repository)
+2025-05-31T22:05:33.966Z INFO  - Stopping site text-to-video-app because it failed during startup.
+2025-05-31T22:06:03.026Z ERROR - DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https://texttovideoregistry.azurecr.io/v2/text-to-video-flask/manifests/v20250601033026\": unauthorized: authentication required, visit https://aka.ms/acr/authorization for more information. CorrelationId: d110943c-ebfd-4129-a7a6-3a0d89d13b4d"}
+
+2025-05-31T22:06:03.027Z WARN  - Image pull failed. Defaulting to local copy if present.
+2025-05-31T22:06:03.029Z ERROR - Image pull failed: Verify docker image configuration and credentials (if using private repository)
+2025-05-31T22:06:08.420Z INFO  - Stopping site text-to-video-app because it failed during startup.
+eo-app.azurewebsites.net -e WEBSITE_INSTANCE_ID=e9ceb7e2a2f87bee9ac0c1bdff98db84909fad4160bada310de29a1eafc01f37 mcr.microsoft.com/appsvc/msitokenservice:stage3 
+2025-05-31T22:05:57.308Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2025-05-31T22:06:41.818Z ERROR - DockerApiException: Docker API responded with status code=InternalServerError, response={"message":"Head \"https://texttovideoregistry.azurecr.io/v2/text-to-video-flask/manifests/v20250601033026\": unauthorized: authentication required, visit https://aka.ms/acr/authorization for more information. CorrelationId: 76b87ebd-7167-4cad-b017-8cef261e63c3"}
+
+2025-05-31T22:06:41.819Z WARN  - Image pull failed. Defaulting to local copy if present.
+2025-05-31T22:06:41.821Z ERROR - Image pull failed: Verify docker image configuration and credentials (if using private repository)
+2025-05-31T22:06:47.164Z INFO  - Stopping site text-to-video-app because it failed during startup.
+eo-app.azurewebsites.net -e WEBSITE_INSTANCE_ID=e9ceb7e2a2f87bee9ac0c1bdff98db84909fad4160bada310de29a1eafc01f37 mcr.microsoft.com/appsvc/msitokenservice:stage3 
+2025-05-31T22:06:37.571Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2025-05-31T22:09:24.184Z INFO  - Pulling image: texttovideoregistry.azurecr.io/text-to-video-flask:v20250601033026
+2025-05-31T22:09:24.443Z INFO  - v20250601033026 Pulling from text-to-video-flask
+2025-05-31T22:09:24.445Z INFO  - 3dae71ba6b94 Pulling fs layer
+2025-05-31T22:09:24.454Z INFO  - 2481a58f9b3d Pulling fs layer
+2025-05-31T22:09:24.454Z INFO  - 1692d37168f6 Pulling fs layer
+2025-05-31T22:09:24.455Z INFO  - a0684e18c375 Pulling fs layer
+2025-05-31T22:09:24.455Z INFO  - 531f5220c210 Pulling fs layer
+2025-05-31T22:09:24.455Z INFO  - 89b42414d70c Pulling fs layer
+2025-05-31T22:09:24.455Z INFO  - 63f2e156bf4d Pulling fs layer
+2025-05-31T22:09:24.456Z INFO  - 2117a74b90f7 Pulling fs layer
+2025-05-31T22:09:24.456Z INFO  - f24b582bbbd3 Pulling fs layer
+2025-05-31T22:09:24.456Z INFO  - fbf71dd5fe85 Pulling fs layer
+2025-05-31T22:09:24.457Z INFO  - e19229219d22 Pulling fs layer
+2025-05-31T22:09:24.518Z INFO  - a0684e18c375 Downloading 248B / 248B
+2025-05-31T22:09:24.522Z INFO  - a0684e18c375 Verifying Checksum
+2025-05-31T22:09:24.522Z INFO  - a0684e18c375 Download complete
+2025-05-31T22:09:24.526Z INFO  - fbf71dd5fe85 Downloading 3KB / 3KB
+2025-05-31T22:09:24.526Z INFO  - fbf71dd5fe85 Verifying Checksum
+2025-05-31T22:09:24.526Z INFO  - fbf71dd5fe85 Download complete
+2025-05-31T22:09:24.527Z INFO  - e19229219d22 Downloading 113B / 113B
+2025-05-31T22:09:24.527Z INFO  - e19229219d22 Verifying Checksum
+2025-05-31T22:09:24.527Z INFO  - e19229219d22 Download complete
+2025-05-31T22:09:24.534Z INFO  - 63f2e156bf4d Downloading 191B / 191B
+2025-05-31T22:09:24.534Z INFO  - 63f2e156bf4d Verifying Checksum
+2025-05-31T22:09:24.534Z INFO  - 63f2e156bf4d Download complete
+2025-05-31T22:09:24.541Z INFO  - 531f5220c210 Downloading 92B / 92B
+2025-05-31T22:09:24.541Z INFO  - 531f5220c210 Download complete
+2025-05-31T22:09:24.548Z INFO  - f24b582bbbd3 Downloading 3KB / 14KB
+2025-05-31T22:09:24.548Z INFO  - f24b582bbbd3 Downloading 14KB / 14KB
+2025-05-31T22:09:24.548Z INFO  - f24b582bbbd3 Verifying Checksum
+2025-05-31T22:09:24.548Z INFO  - f24b582bbbd3 Download complete
+2025-05-31T22:09:24.589Z INFO  - 2117a74b90f7 Verifying Checksum
+2025-05-31T22:09:24.589Z INFO  - 2117a74b90f7 Download complete
+2025-05-31T22:09:24.600Z INFO  - 89b42414d70c Downloading 527KB / 369MB
+2025-05-31T22:09:24.622Z INFO  - 2481a58f9b3d Verifying Checksum
+2025-05-31T22:09:24.622Z INFO  - 2481a58f9b3d Download complete
+2025-05-31T22:09:24.696Z INFO  - 1692d37168f6 Verifying Checksum
+2025-05-31T22:09:24.710Z INFO  - 1692d37168f6 Download complete
+2025-05-31T22:09:24.841Z INFO  - 3dae71ba6b94 Downloading 23MB / 27MB
+2025-05-31T22:09:24.877Z INFO  - 3dae71ba6b94 Verifying Checksum
+2025-05-31T22:09:24.877Z INFO  - 3dae71ba6b94 Download complete
+2025-05-31T22:09:25.106Z INFO  - 89b42414d70c Downloading 74MB / 369MB
+2025-05-31T22:09:25.207Z INFO  - 89b42414d70c Downloading 91MB / 369MB
+2025-05-31T22:09:25.539Z INFO  - 89b42414d70c Downloading 151MB / 369MB
+2025-05-31T22:09:25.646Z INFO  - 89b42414d70c Downloading 164MB / 369MB
+2025-05-31T22:09:25.851Z INFO  - 89b42414d70c Downloading 200MB / 369MB
+2025-05-31T22:09:26.119Z INFO  - 3dae71ba6b94 Extracting 6MB / 27MB
+2025-05-31T22:09:26.154Z INFO  - 89b42414d70c Downloading 258MB / 369MB
+2025-05-31T22:09:26.257Z INFO  - 89b42414d70c Downloading 276MB / 369MB
+2025-05-31T22:09:26.357Z INFO  - 89b42414d70c Downloading 295MB / 369MB
+2025-05-31T22:09:26.447Z INFO  - 3dae71ba6b94 Extracting 11MB / 27MB
+2025-05-31T22:09:26.457Z INFO  - 89b42414d70c Downloading 313MB / 369MB
+2025-05-31T22:09:26.558Z INFO  - 3dae71ba6b94 Extracting 12MB / 27MB
+2025-05-31T22:09:26.671Z INFO  - 89b42414d70c Downloading 350MB / 369MB
+2025-05-31T22:09:26.674Z INFO  - 3dae71ba6b94 Extracting 15MB / 27MB
+2025-05-31T22:09:26.770Z INFO  - 89b42414d70c Verifying Checksum
+2025-05-31T22:09:26.770Z INFO  - 89b42414d70c Download complete
+2025-05-31T22:09:26.771Z INFO  - 3dae71ba6b94 Extracting 17MB / 27MB
+2025-05-31T22:09:26.876Z INFO  - 3dae71ba6b94 Extracting 21MB / 27MB
+2025-05-31T22:09:27.136Z INFO  - 3dae71ba6b94 Extracting 24MB / 27MB
+2025-05-31T22:09:27.398Z INFO  - 3dae71ba6b94 Extracting 26MB / 27MB
+2025-05-31T22:09:27.652Z INFO  - 3dae71ba6b94 Extracting 27MB / 27MB
+2025-05-31T22:09:28.192Z INFO  - 3dae71ba6b94 Pull complete
+2025-05-31T22:09:28.399Z INFO  - 2481a58f9b3d Extracting 3MB / 3MB
+2025-05-31T22:09:28.401Z INFO  - 2481a58f9b3d Extracting 3MB / 3MB
+2025-05-31T22:09:28.485Z INFO  - 2481a58f9b3d Pull complete
+2025-05-31T22:09:28.668Z INFO  - 1692d37168f6 Extracting 2MB / 14MB
+2025-05-31T22:09:28.808Z INFO  - 1692d37168f6 Extracting 4MB / 14MB
+2025-05-31T22:09:28.909Z INFO  - 1692d37168f6 Extracting 6MB / 14MB
+2025-05-31T22:09:29.010Z INFO  - 1692d37168f6 Extracting 8MB / 14MB
+2025-05-31T22:09:29.120Z INFO  - 1692d37168f6 Extracting 10MB / 14MB
+2025-05-31T22:09:29.237Z INFO  - 1692d37168f6 Extracting 12MB / 14MB
+2025-05-31T22:09:29.340Z INFO  - 1692d37168f6 Extracting 13MB / 14MB
+2025-05-31T22:09:29.481Z INFO  - 1692d37168f6 Extracting 14MB / 14MB
+2025-05-31T22:09:29.936Z INFO  - 1692d37168f6 Pull complete
+2025-05-31T22:09:29.957Z INFO  - a0684e18c375 Extracting 248B / 248B
+2025-05-31T22:09:29.995Z INFO  - a0684e18c375 Extracting 248B / 248B
+2025-05-31T22:09:30.078Z INFO  - a0684e18c375 Pull complete
+2025-05-31T22:09:30.098Z INFO  - 531f5220c210 Extracting 92B / 92B
+2025-05-31T22:09:30.138Z INFO  - 531f5220c210 Extracting 92B / 92B
+2025-05-31T22:09:30.195Z INFO  - 531f5220c210 Pull complete
+2025-05-31T22:09:30.294Z INFO  - 89b42414d70c Extracting 544KB / 369MB
+2025-05-31T22:09:30.510Z INFO  - 89b42414d70c Extracting 7MB / 369MB
+2025-05-31T22:09:30.619Z INFO  - 89b42414d70c Extracting 10MB / 369MB
+2025-05-31T22:09:32.203Z INFO  - 89b42414d70c Extracting 18MB / 369MB
+2025-05-31T22:09:33.447Z INFO  - 89b42414d70c Extracting 22MB / 369MB
+2025-05-31T22:09:33.555Z INFO  - 89b42414d70c Extracting 24MB / 369MB
+2025-05-31T22:09:33.689Z INFO  - 89b42414d70c Extracting 25MB / 369MB
+2025-05-31T22:09:34.463Z INFO  - 89b42414d70c Extracting 30MB / 369MB
+2025-05-31T22:09:34.675Z INFO  - 89b42414d70c Extracting 37MB / 369MB
+2025-05-31T22:09:35.120Z INFO  - 89b42414d70c Extracting 52MB / 369MB
+2025-05-31T22:09:35.462Z INFO  - 89b42414d70c Extracting 61MB / 369MB
+2025-05-31T22:09:35.678Z INFO  - 89b42414d70c Extracting 69MB / 369MB
+2025-05-31T22:09:35.888Z INFO  - 89b42414d70c Extracting 75MB / 369MB
+2025-05-31T22:09:36.198Z INFO  - 89b42414d70c Extracting 82MB / 369MB
+2025-05-31T22:09:36.641Z INFO  - 89b42414d70c Extracting 89MB / 369MB
+2025-05-31T22:09:36.742Z INFO  - 89b42414d70c Extracting 90MB / 369MB
+2025-05-31T22:09:36.847Z INFO  - 89b42414d70c Extracting 91MB / 369MB
+2025-05-31T22:09:37.101Z INFO  - 89b42414d70c Extracting 96MB / 369MB
+2025-05-31T22:09:37.312Z INFO  - 89b42414d70c Extracting 103MB / 369MB
+2025-05-31T22:09:37.415Z INFO  - 89b42414d70c Extracting 106MB / 369MB
+2025-05-31T22:09:37.708Z INFO  - 89b42414d70c Extracting 112MB / 369MB
+2025-05-31T22:09:38.024Z INFO  - 89b42414d70c Extracting 120MB / 369MB
+2025-05-31T22:09:38.445Z INFO  - 89b42414d70c Extracting 127MB / 369MB
+2025-05-31T22:09:38.666Z INFO  - 89b42414d70c Extracting 133MB / 369MB
+2025-05-31T22:09:38.879Z INFO  - 89b42414d70c Extracting 141MB / 369MB
+2025-05-31T22:09:40.106Z INFO  - 89b42414d70c Extracting 147MB / 369MB
+2025-05-31T22:09:40.211Z INFO  - 89b42414d70c Extracting 150MB / 369MB
+2025-05-31T22:09:40.985Z INFO  - 89b42414d70c Extracting 156MB / 369MB
+2025-05-31T22:09:41.203Z INFO  - 89b42414d70c Extracting 163MB / 369MB
+2025-05-31T22:09:41.414Z INFO  - 89b42414d70c Extracting 171MB / 369MB
+2025-05-31T22:09:41.630Z INFO  - 89b42414d70c Extracting 179MB / 369MB
+2025-05-31T22:09:41.836Z INFO  - 89b42414d70c Extracting 187MB / 369MB
+2025-05-31T22:09:43.067Z INFO  - 89b42414d70c Extracting 194MB / 369MB
+2025-05-31T22:09:43.170Z INFO  - 89b42414d70c Extracting 200MB / 369MB
+2025-05-31T22:09:43.385Z INFO  - 89b42414d70c Extracting 209MB / 369MB
+2025-05-31T22:09:43.604Z INFO  - 89b42414d70c Extracting 216MB / 369MB
+2025-05-31T22:09:43.868Z INFO  - 89b42414d70c Extracting 224MB / 369MB
+2025-05-31T22:09:44.072Z INFO  - 89b42414d70c Extracting 232MB / 369MB
+2025-05-31T22:09:44.279Z INFO  - 89b42414d70c Extracting 239MB / 369MB
+2025-05-31T22:09:44.553Z INFO  - 89b42414d70c Extracting 246MB / 369MB
+2025-05-31T22:09:47.523Z INFO  - 89b42414d70c Extracting 247MB / 369MB
+2025-05-31T22:09:47.730Z INFO  - 89b42414d70c Extracting 253MB / 369MB
+2025-05-31T22:09:48.575Z INFO  - 89b42414d70c Extracting 260MB / 369MB
+2025-05-31T22:09:48.576Z INFO  - 89b42414d70c Extracting 268MB / 369MB
+2025-05-31T22:09:48.576Z INFO  - 89b42414d70c Extracting 276MB / 369MB
+2025-05-31T22:09:49.576Z INFO  - 89b42414d70c Extracting 283MB / 369MB
+2025-05-31T22:09:49.576Z INFO  - 89b42414d70c Extracting 291MB / 369MB
+2025-05-31T22:09:49.576Z INFO  - 89b42414d70c Extracting 297MB / 369MB
+2025-05-31T22:09:49.576Z INFO  - 89b42414d70c Extracting 303MB / 369MB
+2025-05-31T22:09:49.576Z INFO  - 89b42414d70c Extracting 311MB / 369MB
+2025-05-31T22:09:50.577Z INFO  - 89b42414d70c Extracting 318MB / 369MB
+2025-05-31T22:09:50.577Z INFO  - 89b42414d70c Extracting 319MB / 369MB
+2025-05-31T22:09:50.577Z INFO  - 89b42414d70c Extracting 325MB / 369MB
+2025-05-31T22:09:50.577Z INFO  - 89b42414d70c Extracting 327MB / 369MB
+2025-05-31T22:09:51.300Z INFO  - 89b42414d70c Extracting 327MB / 369MB
+2025-05-31T22:09:51.401Z INFO  - 89b42414d70c Extracting 328MB / 369MB
+2025-05-31T22:09:52.048Z INFO  - 89b42414d70c Extracting 334MB / 369MB
+2025-05-31T22:09:52.151Z INFO  - 89b42414d70c Extracting 335MB / 369MB
+2025-05-31T22:09:52.746Z INFO  - 89b42414d70c Extracting 350MB / 369MB
+2025-05-31T22:09:52.851Z INFO  - 89b42414d70c Extracting 357MB / 369MB
+2025-05-31T22:09:52.966Z INFO  - 89b42414d70c Extracting 364MB / 369MB
+2025-05-31T22:09:53.482Z INFO  - 89b42414d70c Extracting 369MB / 369MB
+2025-05-31T22:09:53.702Z INFO  - 89b42414d70c Pull complete
+2025-05-31T22:09:53.724Z INFO  - 63f2e156bf4d Extracting 191B / 191B
+2025-05-31T22:09:53.761Z INFO  - 63f2e156bf4d Extracting 191B / 191B
+2025-05-31T22:09:54.129Z INFO  - 63f2e156bf4d Pull complete
+2025-05-31T22:09:54.408Z INFO  - 2117a74b90f7 Extracting 2MB / 3MB
+2025-05-31T22:09:54.512Z INFO  - 2117a74b90f7 Extracting 3MB / 3MB
+2025-05-31T22:09:55.764Z INFO  - 2117a74b90f7 Extracting 3MB / 3MB
+2025-05-31T22:09:55.767Z INFO  - 2117a74b90f7 Extracting 3MB / 3MB
+2025-05-31T22:09:56.641Z INFO  - 2117a74b90f7 Pull complete
+2025-05-31T22:09:56.678Z INFO  - f24b582bbbd3 Extracting 14KB / 14KB
+2025-05-31T22:09:56.726Z INFO  - f24b582bbbd3 Extracting 14KB / 14KB
+2025-05-31T22:09:56.759Z INFO  - f24b582bbbd3 Pull complete
+2025-05-31T22:09:56.781Z INFO  - fbf71dd5fe85 Extracting 3KB / 3KB
+2025-05-31T22:09:56.802Z INFO  - fbf71dd5fe85 Extracting 3KB / 3KB
+2025-05-31T22:09:56.847Z INFO  - fbf71dd5fe85 Pull complete
+2025-05-31T22:09:56.859Z INFO  - e19229219d22 Extracting 113B / 113B
+2025-05-31T22:09:56.880Z INFO  - e19229219d22 Extracting 113B / 113B
+2025-05-31T22:09:56.911Z INFO  - e19229219d22 Pull complete
+2025-05-31T22:09:56.947Z INFO  -  Digest: sha256:536b5381577ba2c4564c37408f0d113a7b2f33733c17fa07acb73a26bebf6c7b
+2025-05-31T22:09:56.964Z INFO  -  Status: Downloaded newer image for texttovideoregistry.azurecr.io/text-to-video-flask:v20250601033026
+2025-05-31T22:09:56.977Z INFO  - Pull Image successful, Time taken: 32 Seconds
+2025-05-31T22:09:57.004Z INFO  - Starting container for site
+2025-05-31T22:09:57.004Z INFO  - docker run -d --expose=5000 --name text-to-video-app_0_b9066047 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITES_ENABLE_APP_SERVICE_STORAGE=false -e WEBSITES_PORT=5000 -e WEBSITE_SITE_NAME=text-to-video-app -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=text-to-video-app.azurewebsites.net -e WEBSITE_INSTANCE_ID=e9ceb7e2a2f87bee9ac0c1bdff98db84909fad4160bada310de29a1eafc01f37 texttovideoregistry.azurecr.io/text-to-video-flask:v20250601033026 
+2025-05-31T22:09:57.004Z INFO  - Logging is not enabled for this container.
+Please use https://aka.ms/linux-diagnostics to enable logging to see container logs here.
+2025-05-31T22:10:00.867Z INFO  - Initiating warmup request to container text-to-video-app_0_b9066047_msiProxy for site text-to-video-app
+2025-05-31T22:10:00.887Z INFO  - Container text-to-video-app_0_b9066047_msiProxy for site text-to-video-app initialized successfully and is ready to serve requests.
+2025-05-31T22:10:00.887Z INFO  - Initiating warmup request to container text-to-video-app_0_b9066047 for site text-to-video-app
+2025-05-31T22:10:15.958Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 15.0911316 sec
+2025-05-31T22:10:31.023Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 30.1561449 sec
+2025-05-31T22:10:46.086Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 45.2192502 sec
+2025-05-31T22:11:01.635Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 60.7688455 sec
+2025-05-31T22:11:17.597Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 76.730018 sec
+2025-05-31T22:11:34.151Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 93.2847985 sec
+2025-05-31T22:11:51.607Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 110.7408936 sec
+2025-05-31T22:12:06.662Z INFO  - Waiting for response to warmup request for container text-to-video-app_0_b9066047. Elapsed time = 125.7950164 sec

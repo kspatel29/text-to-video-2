@@ -4,7 +4,8 @@ import subprocess
 import threading
 import time
 import json
-import ssl
+import sys
+import argparse
 from flask import Flask, request, jsonify, send_file, abort
 from flask_cors import CORS
 from datetime import datetime
@@ -231,13 +232,29 @@ def download_video(request_id):
     )
 
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    """
+    Health check endpoint for Azure App Service
+    """
+    return jsonify({
+        'status': 'healthy',
+        'timestamp': datetime.now().isoformat(),
+        'service': 'text-to-video-flask'
+    }), 200
+
+
 if __name__ == '__main__':
-    # Create SSL context for HTTPS
-    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-    context.load_cert_chain('cert.pem', 'key.pem')
+    # Parse command line arguments for Azure compatibility
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--port', type=int, default=5000, help='Port to run the server on')
+    args = parser.parse_args()
     
-    print("Starting HTTPS server on https://localhost:5000")
-    print("Note: Since this uses a self-signed certificate, browsers will show a security warning.")
-    print("You can safely proceed by clicking 'Advanced' and 'Proceed to localhost'.")
+    # Get port from command line, environment variable, or default
+    port = args.port or int(os.environ.get('WEBSITES_PORT', 5000))
     
-    app.run(host='0.0.0.0', port=5000, debug=False, ssl_context=context)
+    print(f"Starting Flask server on port {port}")
+    print("Flask Video Generation API is ready!")
+    
+    # Run the Flask app without SSL (Azure handles SSL termination)
+    app.run(host='0.0.0.0', port=port, debug=False)
