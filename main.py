@@ -146,7 +146,7 @@ def main():
 
     Important: Make sure you do not have any backticks, backquotes in your narration.
     
-    The output should be valid JSON with a structure like:
+    The output should be only a valid JSON with a structure like:
     {
       "slides": [
         {
@@ -194,6 +194,9 @@ ground_color = "#888888"
 arrow_color  = "#FFFF00"
 text_color   = "#FFFFFF"
 
+SAFE_RADIUS  = 3.5     # keep everything inside this circle
+SAFE_STROKE  = 4       # max stroke-width permitted
+
 ────────────────────────────────────────────────────────
 2 ┃ Class skeleton – *edit only inside the #### block*
 ────────────────────────────────────────────────────────
@@ -205,39 +208,49 @@ class Slide{i}(VoiceoverScene):
             ############################################################
             # IMPLEMENT the visual spec below using ONLY the allowed
             # API (see section 3).  Every self.play() must include
-            # run_time = tracker.duration * k     where 0 < k ≤ 1.
+            #     run_time = tracker.duration * k     where 0 < k ≤ 1.
+            # Use k = 0.8 unless a different value is essential.
             #
-            # {slide['visual_spec']}
+            #  VISUAL SPEC:
+            #  {slide['visual_spec']}
+            #
+            # SAFETY HINTS
+            # • Never reference .points or do NumPy math.
+            # • Keep every mobject within SAFE_RADIUS of ORIGIN.
+            # • If you index groups (obj[0]), guard against IndexError.
             ############################################################
 
 ────────────────────────────────────────────────────────
 3 ┃ Allowed API surface
 ────────────────────────────────────────────────────────
+✓ mobjects you MAY create
+  • Circle(radius=r, color=?, fill_opacity=0–1)
+  • Square(side_length=s, …)   • Rectangle(width=w, height=h, …)
+  • Text("string", color=?, font_size=24–72)
+  • Arrow(START, END, buff=0, stroke_width=SAFE_STROKE, color=arrow_color)
+
 ✓ self.play(
       FadeIn(obj) | FadeOut(obj) | Write(obj)
-      | GrowFromCenter(obj) | Create(obj) |                  🔒
-      | Animation(Arrow)                                   🔒  # Arrow allowed
+      | GrowFromCenter(obj) | Create(obj) |            🔒
+      | Animation(Arrow)                             🔒 # Arrow allowed
       ,
       run_time = tracker.duration * k,
       rate_func = linear
   )
 
 ✓ obj methods you MAY call
-  • center(), move_to(POS), to_edge(DIR, buff=0.x)
-  • next_to(TARGET, DIR, buff=0.x)
-  • shift(LEFT * n ± UP * m …)
-  • scale(f)          • set_color(hex)
+  • move_to(POS) • next_to(TARGET, DIR, buff=0.x) • to_edge(DIR, buff=0.x)
+  • shift(LEFT * n ± UP * m …) • scale(f) • set_color(hex)
 
-✗ FORBIDDEN
-  • Any NumPy math on points:  (p1 - p2), .normalize(), / np.linalg.norm  🔒
-    ↳  Instead build arrows with Arrow(start, end, …)
+✗ STRICTLY FORBIDDEN (causes auto-fail)
+  • Sector, AnnularSector, NumberLine, DashedVMobject, VGroup/HGroup aliases
+  • Any NumPy math on points  (p1 - p2, / np.linalg.norm, etc.)
   • FRAME_WIDTH, FRAME_HEIGHT, config.*, self.camera.frame
   • built-in Manim colours (BLUE, GREEN_C, …)
-  • MathTex / Tex  → use Text() for any formula (treat it as ONE object)
-  • obj.fade_out() / obj.to_center() / add_updater()
-  • AnimationGroup / Succession / LaggedStart
-  • FadeIn/FadeOut with no object, or with keyword **mobject=**
-  • self.wait(), wait_until(), remaining_duration, get_end_animation_time()
+  • MathTex / Tex  ➜ use plain Text()
+  • obj.fade_out(), obj.to_center(), add_updater(), add(*objs)
+  • AnimationGroup, Succession, LaggedStart, Wait, remaining_duration
+  • FadeIn/FadeOut with **mobject=** kwarg or with no target
 """
         
         code = flash(code_prompt)

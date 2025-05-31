@@ -7,6 +7,7 @@ import json
 from flask import Flask, request, jsonify, send_file, abort
 from flask_cors import CORS
 from datetime import datetime
+import shlex
 
 app = Flask(__name__)
 CORS(app)
@@ -56,8 +57,10 @@ def generate_video(request_id, input_text):
         requests_data[request_id]['start_time'] = datetime.now().isoformat()
         save_requests(requests_data)
 
+        escaped_input = shlex.quote(input_text)
+        
         # Build the command to run in the virtual environment
-        cmd = f"source venv/bin/activate && python main.py '{input_text}'"
+        cmd = f"source venv/bin/activate && python main.py {escaped_input}"
 
         # Execute the command
         process = subprocess.Popen(
