@@ -4,6 +4,7 @@ import subprocess
 import threading
 import time
 import json
+import ssl
 from flask import Flask, request, jsonify, send_file, abort
 from flask_cors import CORS
 from datetime import datetime
@@ -231,4 +232,12 @@ def download_video(request_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    # Create SSL context for HTTPS
+    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+    context.load_cert_chain('cert.pem', 'key.pem')
+    
+    print("Starting HTTPS server on https://localhost:5000")
+    print("Note: Since this uses a self-signed certificate, browsers will show a security warning.")
+    print("You can safely proceed by clicking 'Advanced' and 'Proceed to localhost'.")
+    
+    app.run(host='0.0.0.0', port=5000, debug=False, ssl_context=context)
